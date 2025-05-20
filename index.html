@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Recepcionista</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #e0e0e0;
+    }
+    .call-button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .call-button:hover {
+      background-color: #45a049;
+    }
+    .alert {
+      background-color: #ffcc00;
+      color: black;
+      font-weight: bold;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { background-color: #ffcc00; }
+      50% { background-color: #ffe680; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Panel de Recepcionista</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Establecimiento</th>
+        <th>Enlace a sala</th>
+        <th>Estado</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Establecimiento 1</td>
+        <td><a href="https://meet.jit.si/establecimiento1" target="_blank">Sala 1</a></td>
+        <td>Esperando</td>
+        <td><button class="call-button" onclick="window.open('https://meet.jit.si/establecimiento1')">Entrar a sala</button></td>
+      </tr>
+      <tr>
+        <td>Establecimiento 2</td>
+        <td><a href="https://meet.jit.si/establecimiento2" target="_blank">Sala 2</a></td>
+        <td class="alert">Llamando</td>
+        <td><button class="call-button" onclick="window.open('https://meet.jit.si/establecimiento2')">Entrar a sala 🔔</button></td>
+      </tr>
+      <tr>
+        <td>Establecimiento 3</td>
+        <td><a href="https://meet.jit.si/establecimiento3" target="_blank">Sala 3</a></td>
+        <td>Inactivo</td>
+        <td><button class="call-button" onclick="window.open('https://meet.jit.si/establecimiento3')">Entrar a sala</button></td>
+      </tr>
+      <tr>
+        <td>Establecimiento 4</td>
+        <td><a href="https://meet.jit.si/establecimiento4" target="_blank">Sala 4</a></td>
+        <td>En conversación</td>
+        <td><button class="call-button" onclick="window.open('https://meet.jit.si/establecimiento4')">Finalizar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
